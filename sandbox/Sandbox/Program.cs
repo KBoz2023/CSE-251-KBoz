@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel;
+using System.Security.Principal;
 
 class Program
 {
@@ -6,5 +8,10 @@ class Program
     {
         Console.WriteLine("Hello Sandbox World!");
         Console.Write("Do you want to play a game: ");
+
+        Bank bank = new Bank();
+
+        Console.WriteLine($"you have {bank.GetAccountBalance()}");
+        bank.Withdraw();
     }
 }
