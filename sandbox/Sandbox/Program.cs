@@ -6,12 +6,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
-        Console.Write("Do you want to play a game: ");
+        Console.WriteLine("Hello! Welcome to your SmartHome Manager.");
+        Menu menu = new Menu();
 
-        Bank bank = new Bank();
+        menu.menuMethod();
 
-        Console.WriteLine($"you have {bank.GetAccountBalance()}");
-        bank.Withdraw();
+
+        
+        
     }
 }

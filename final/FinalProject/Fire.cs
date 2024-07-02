@@ -1,0 +1,1 @@
+// class for firing your shot
