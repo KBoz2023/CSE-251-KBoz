@@ -1,10 +1,16 @@
 using System;
+using System.Windows.Forms;
 
-class Program
+namespace YourGameProject
 {
-    static void Main(string[] args)
+    static class Program
     {
-        Console.WriteLine("Hello FinalProject World!");
-        Console.WriteLine("Welcome to Tank wars");
+        // [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
+        }
     }
 }

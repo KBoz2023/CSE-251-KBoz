@@ -1,51 +1,65 @@
 using System;
+using System.Windows.Markup;
 
 
 class Controls
 {
-    Movement movement = new Movement();
-    Fire fire = new Fire();
+    public Movement movement = new Movement();
+    // public Bullet bullet = new Bullet();
+    public Orientate orientate = new Orientate();
+    
+    
 
-    public void HandleInput(ConsoleKey key)
+    public void HandleInput(Keys key)
     {    
         switch (key)
         {
-            case ConsoleKey.W:
+            case Keys.W:
                 movement.moveUp();
+                orientate.currentDirection = Orientate.Direction.Up;
                 break;
 
-            case ConsoleKey.X:
+            case Keys.X:
                 movement.moveDown();
+                orientate.currentDirection = Orientate.Direction.Down;
                 break;
 
-            case ConsoleKey.A:
+            case Keys.A:
                 movement.moveLeft();
+                orientate.currentDirection = Orientate.Direction.Left;
                 break;
 
-            case ConsoleKey.D:
+            case Keys.D:
                 movement.moveRight();
+                orientate.currentDirection = Orientate.Direction.Right;
                 break;
 
-            case ConsoleKey.Q:
+            case Keys.Q:
                 movement.moveUpDiagonalLeft();
+                orientate.currentDirection = Orientate.Direction.UpLeft;
                 break;
 
-            case ConsoleKey.E:
+            case Keys.E:
                 movement.moveUpDiagonalRight();
+                orientate.currentDirection = Orientate.Direction.UpRight;
                 break;
 
-            case ConsoleKey.Z:
+            case Keys.Z:
                 movement.moveDownDiagonalLeft();
+                orientate.currentDirection = Orientate.Direction.DownLeft;
                 break;
 
-            case ConsoleKey.C:
-                movement.moveDownDiagonalright();
+            case Keys.C:
+                movement.moveDownDiagonalRight();
+                orientate.currentDirection = Orientate.Direction.DownRight;
                 break;
 
-            case ConsoleKey.Spacebar:
-                fire.fire();
+            case Keys.S:
+                
                 break;   
 
+
         }
+
     }    
 }

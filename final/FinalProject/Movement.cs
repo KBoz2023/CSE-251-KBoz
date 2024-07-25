@@ -3,47 +3,49 @@
 
 // qweadzxc movement
 
-using System.Runtime.CompilerServices;
 
-public class Movement{
-    private int playerPositionX;
-    private int playerPositionY;
+public class Movement
+{
+    private int playerSpeed = 5;
+    private float angle = 45;
+    public Point playerPosition = new Point(500, 500);
     public void moveUp()
     {
-        playerPositionY += 1;
+        playerPosition.Y -= playerSpeed;
     }
     public void moveLeft()
     {
-        playerPositionX -= 1;
+        playerPosition.X -= playerSpeed;
     }
 
     public void moveRight()
     {
-        playerPositionX += 1;
+        playerPosition.X += playerSpeed;
     }
     public void moveDown()
     {
-       playerPositionY -= 1;
+       playerPosition.Y += playerSpeed;
     }
 
     public void moveUpDiagonalLeft()
     {
-        playerPositionY += 1;
-        playerPositionX -= 1;
+        playerPosition.Y -= playerSpeed;
+        playerPosition.X -= playerSpeed;
     }
     public void moveUpDiagonalRight()
     {
-        playerPositionY += 1;
-        playerPositionX += 1;
+        playerPosition.Y -= playerSpeed;
+        playerPosition.X += playerSpeed;
     }
     public void moveDownDiagonalLeft()
     {
-        playerPositionX -= 1;
-        playerPositionY -= 1;
+        playerPosition.X -= playerSpeed;
+        playerPosition.Y += playerSpeed;
     }
-    public void moveDownDiagonalright()
+    public void moveDownDiagonalRight()
     {
-        playerPositionX += 1;
-        playerPositionY -= 1;
+        playerPosition.X += playerSpeed;
+        playerPosition.Y += playerSpeed;
     }
+
 }
