@@ -5,39 +5,45 @@
 
 using System.Runtime.CompilerServices;
 
-class movement{
-    void moveUp()
-        {
-            is keypressed w
-        }
-    void moveLeft()
+public class Movement{
+    private int playerPositionX;
+    private int playerPositionY;
+    public void moveUp()
     {
-        is keypressed(a);
+        playerPositionY += 1;
+    }
+    public void moveLeft()
+    {
+        playerPositionX -= 1;
     }
 
-    void moveRight()
+    public void moveRight()
     {
-        is keypressed(d)
+        playerPositionX += 1;
     }
-    void moveDown()
+    public void moveDown()
     {
-        is keypressed(x)
+       playerPositionY -= 1;
     }
 
-    void moveUpDiagonalLeft()
-        {
-            is keyPressed q
-        }
-    void moveUpDiagonalRight()
+    public void moveUpDiagonalLeft()
     {
-        is keyPressed(e)
+        playerPositionY += 1;
+        playerPositionX -= 1;
     }
-    void moveDownDiagonalLeft()
+    public void moveUpDiagonalRight()
     {
-        is keypressed(z)
+        playerPositionY += 1;
+        playerPositionX += 1;
     }
-    void moveDownDiagonalright()
+    public void moveDownDiagonalLeft()
     {
-        is keypressed(C)
+        playerPositionX -= 1;
+        playerPositionY -= 1;
+    }
+    public void moveDownDiagonalright()
+    {
+        playerPositionX += 1;
+        playerPositionY -= 1;
     }
 }

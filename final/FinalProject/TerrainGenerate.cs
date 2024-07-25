@@ -32,4 +32,15 @@ class Map
     "|                                                                                           |",
      "___________________________________________________________________________________________"
     ];
+
+    public void AddVerticalLine()
+    {
+
+    }
+
+    public void AddHorizontalLine()
+    {
+        
+    }
+
 }
